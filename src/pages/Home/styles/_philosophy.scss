@@ -1,0 +1,197 @@
+// ======== Philosophy
+.philosophy {
+  &__container {
+    margin-top: 200px;
+    padding: 60px 30px 0;
+    display: flex;
+    gap: 80px;
+
+    @include maxW(1023px) {
+      display: block;
+      margin-top: 150px;
+      padding: 50px 18px 0;
+    }
+  }
+
+  &__left {
+    width: 60.87%;
+    overflow: hidden;
+    position: sticky;
+    top: 60px;
+    left: 0;
+    height: 100%;
+
+    h2 {
+      position: absolute;
+      top: 0;
+      font-size: 2.1rem;
+      font-weight: 400;
+      letter-spacing: -0.42px;
+      z-index: 10;
+    }
+
+    @include maxW(1023px) {
+      width: 100%;
+      position: relative;
+      top: 0;
+
+      h2 {
+        font-size: 1.9rem;
+        letter-spacing: -0.19px;
+      }
+    }
+  }
+
+  &__right {
+    flex: 1;
+
+    @include maxW(1023px) {
+      margin-top: 70px;
+    }
+  }
+
+  &__weare {
+    position: absolute;
+    // bottom: -5px;
+    bottom: 0;
+    left: 0;
+    font-size: 3rem;
+    letter-spacing: -0.6px;
+
+    @include maxW(1023px) {
+      position: initial;
+      font-size: 2.4rem;
+      letter-spacing: -0.24px;
+    }
+  }
+
+  &__bg {
+    position: relative;
+
+    svg {
+      display: block;
+      width: 100%;
+      // height: 100%;
+      // height: calc(100vh - 153px);
+
+      path,
+      rect {
+        fill: currentColor;
+      }
+    }
+
+    @include maxW(1023px) {
+      svg {
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+
+  &__top {
+    display: flex;
+    justify-content: space-between;
+    gap: 50px;
+    margin-bottom: 110px;
+
+    h2 {
+      font-size: 3.4rem;
+      font-weight: 400;
+      letter-spacing: -1.36px;
+      line-height: 1.1;
+    }
+
+    p {
+      // font-family: 'Yu Gothic', YuGothic, 'Hiragino Sans', 'Hiragino Kaku Gothic ProN', Meiryo, sans-serif;
+      font-size: 1.8rem;
+      letter-spacing: -3px;
+    }
+
+    .vertical {
+      writing-mode: vertical-rl;
+      text-orientation: mixed;
+      display: flex;
+      align-items: center;
+      margin-bottom: 15px;
+    }
+
+    .line {
+      width: 1px;
+      height: 25px;
+      background-color: currentColor;
+    }
+
+    @include maxW(1023px) {
+      gap: 25px;
+      margin-bottom: 70px;
+
+      h2 {
+        font-size: 2.8rem;
+        letter-spacing: -1.12px;
+      }
+
+      p {
+        font-size: 1.5rem;
+        letter-spacing: -0.9px;
+      }
+
+      .vertical {
+        margin-bottom: 5px;
+      }
+
+      .line {
+        height: 18px;
+      }
+    }
+  }
+
+  &__mid {
+    margin-bottom: 130px;
+
+    p {
+      // font-family: 'Yu Gothic', YuGothic, 'Hiragino Sans', 'Hiragino Kaku Gothic ProN', Meiryo, sans-serif;
+      font-size: 1.6rem;
+      line-height: 1.5;
+      margin-bottom: 35px;
+      letter-spacing: -0.96px;
+    }
+
+    @include maxW(1023px) {
+      margin-bottom: 85px;
+
+      p {
+        font-size: 1.4rem;
+        letter-spacing: -0.84px;
+        margin-bottom: 30px;
+      }
+    }
+  }
+
+  &__bot {
+    p {
+      font-size: 1.7rem;
+      line-height: 1.5;
+      letter-spacing: -0.34px;
+      margin-bottom: 35px;
+
+      &:last-child {
+        margin-bottom: initial;
+      }
+    }
+
+    @include maxW(1023px) {
+      margin-bottom: 75px;
+
+      .line {
+        font-size: 1.4rem;
+        margin-bottom: 25px;
+      }
+
+      p {
+        font-size: 1.5rem;
+        letter-spacing: 0;
+        margin-bottom: 30px;
+      }
+    }
+  }
+}

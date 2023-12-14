@@ -1,0 +1,122 @@
+// ======== Company
+.company {
+  &__container {
+    margin: 200px auto;
+    padding: 60px 30px 0;
+    display: grid;
+    grid-template-columns: 21.5% 1fr 1fr;
+    gap: 80px;
+
+    @include maxW(1023px) {
+      display: block;
+      margin-top: 150px;
+      margin-bottom: 65px;
+      padding: 50px 18px 0;
+    }
+  }
+
+  &__left {
+    h2 {
+      margin-bottom: 30px;
+      font-size: 2.1rem;
+      letter-spacing: -0.42px;
+      line-height: 1.2;
+      font-weight: 400;
+    }
+
+    @include maxW(1023px) {
+      margin-bottom: 70px;
+
+      h2 {
+        margin-bottom: 15px;
+        font-size: 1.8rem;
+        letter-spacing: -0.18px;
+      }
+    }
+  }
+
+  &__lang {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-family: var(--times-fonts);
+
+    p,
+    span {
+      cursor: pointer;
+      font-size: 1.7rem;
+      opacity: 0.3;
+      transition: 0.15s linear;
+      text-transform: uppercase;
+
+      &.active {
+        opacity: 1;
+      }
+    }
+
+    @include maxW(1023px) {
+      p,
+      span {
+        font-size: 1.6rem;
+      }
+    }
+  }
+
+  &__text {
+    font-size: 1.6rem;
+    font-weight: 400;
+    letter-spacing: -0.32px;
+    line-height: 1.5;
+    margin-bottom: 30px;
+
+    @include maxW(1023px) {
+      font-size: 1.5rem;
+      letter-spacing: 0;
+    }
+  }
+
+  &__content {
+    margin-bottom: 80px;
+
+    h3 {
+      margin-bottom: initial;
+    }
+
+    p,
+    a {
+      font-size: 1.5rem;
+      line-height: 1.7;
+      letter-spacing: -0.45px;
+    }
+
+    a {
+      text-decoration: underline;
+    }
+
+    @include maxW(1023px) {
+      margin-bottom: 65px;
+
+      p,
+      a {
+        font-size: 1.3rem;
+        letter-spacing: 0;
+      }
+    }
+  }
+
+  &__subtitle {
+    margin-bottom: 25px;
+
+    @include maxW(1023px) {
+      p {
+        font-size: 1.4rem;
+      }
+    }
+  }
+
+  &__member {
+    @include maxW(1023px) {
+      margin-bottom: 65px;
+    }
+  }
+}

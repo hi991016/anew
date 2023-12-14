@@ -1,0 +1,167 @@
+// ======== Intro
+.intro {
+  margin-bottom: 50px;
+
+  &__container {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+
+    position: relative;
+    width: 100%;
+    height: 100vh;
+
+    @include maxW(1023px) {
+      display: block;
+      gap: unset;
+    }
+  }
+
+  @include maxW(1023px) {
+    margin-bottom: 150px;
+  }
+
+  &__omoty {
+    margin: 0 auto;
+
+    opacity: 0;
+    transition: opacity 0.2s ease-in-out;
+
+    &.is-active {
+      opacity: 1;
+    }
+
+    path,
+    rect {
+      fill: var(--main-text-cl);
+    }
+
+    @include maxW(1023px) {
+      svg {
+        width: 364px;
+        height: 318.65px;
+      }
+    }
+  }
+
+  &__left,
+  &__right {
+    width: 50%;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    align-items: center;
+
+    @include maxW(1023px) {
+      width: 100%;
+    }
+  }
+
+  &__left {
+    @include maxW(1023px) {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -55%);
+    }
+  }
+
+  &__right {
+    h2 {
+      font-size: 3.4rem;
+      font-weight: 400;
+      letter-spacing: -1.36px;
+      margin-bottom: 25px;
+    }
+
+    @include maxW(1023px) {
+      h2 {
+        font-size: 2.6rem;
+        letter-spacing: -0.52px;
+        margin-bottom: 10px;
+      }
+    }
+
+    .top {
+      p {
+        font-size: 1.8rem;
+        letter-spacing: -1.08px;
+
+        span {
+          font-size: 1.9rem;
+          letter-spacing: 0;
+        }
+      }
+
+      @include maxW(1023px) {
+        text-align: center;
+
+        p {
+          font-size: 1.5rem;
+          letter-spacing: -0.9px;
+
+          span {
+            font-size: 1.6rem;
+          }
+        }
+      }
+    }
+
+    .bottom {
+      max-width: 500px;
+      line-height: 1.5;
+
+      p {
+        font-size: 1.6rem;
+        letter-spacing: -0.96px;
+
+        span {
+          font-size: 1.7rem;
+          letter-spacing: 0;
+        }
+      }
+
+      @include maxW(1023px) {
+        max-width: 100%;
+
+        p {
+          font-size: 1.4rem;
+          letter-spacing: -0.84px;
+
+          span {
+            font-size: 1.5rem;
+          }
+        }
+      }
+    }
+  }
+
+  &__panel {
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    opacity: 0;
+    transition: opacity 0.2s ease-in-out;
+
+    padding: 0 18px;
+
+    &.is-active {
+      opacity: 1;
+    }
+
+    @include maxW(1023px) {
+      display: block;
+      height: auto;
+      top: auto;
+      bottom: 30px;
+    }
+  }
+}
